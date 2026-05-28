@@ -1,0 +1,13 @@
+Employee ID,Transaction Date,Expense Type,Origin Airport Code,Destination Airport Code,Travel Class,Distance,Distance Unit,Amount,Currency Code,Vendor Name
+E001,2024-01-05,Airfare,BOM,DEL,economy,,,12000,INR,Indigo
+E002,2024-01-06,Flight,DEL,LHR,business,,,240000,INR,British Airways
+E003,2024-01-07,Air,BOM,SIN,economy,2440,km,36000,INR,Singapore Airlines
+E004,2024-01-08,Airfare,HYD,BOM,economy,,,9000,INR,Vistara
+E005,2024-01-09,Flight,DEL,DXB,business,1360,miles,82000,INR,Emirates
+E006,2024-01-10,Airfare,BOM,DEL,business,,,32000,INR,Air India
+E007,2024-01-11,Air,DEL,LHR,economy,,,78000,INR,Virgin Atlantic
+E008,2024-01-12,Airfare,XXX,BOM,economy,,,11000,INR,Unknown Air
+E009,2024-01-13,Hotel,BOM,DEL,economy,,,15000,INR,Hotel One
+E010,2024-01-14,Hotel,DEL,DXB,economy,,,18000,INR,Hotel Two
+E011,2024-01-15,Flight,BOM,SIN,business,,,125000,INR,Singapore Airlines
+E012,2024-01-16,Airfare,HYD,BOM,economy,390,miles,9500,INR,Indigo
