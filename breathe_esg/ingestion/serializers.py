@@ -47,11 +47,16 @@ class NormalizedEntrySerializer(serializers.ModelSerializer):
 
 class BatchDetailSerializer(serializers.ModelSerializer):
     entries = serializers.SerializerMethodField()
+    error_rows = serializers.SerializerMethodField()
 
     class Meta:
         model = IngestionBatch
-        fields = ("id", "source_type", "filename", "uploaded_at", "row_count", "error_count", "status", "entries")
+        fields = ("id", "source_type", "filename", "uploaded_at", "row_count", "error_count", "status", "entries", "error_rows")
 
     def get_entries(self, obj):
         entries = NormalizedEntry.objects.filter(batch=obj).select_related("review_status")
         return NormalizedEntrySerializer(entries, many=True).data
+
+    def get_error_rows(self, obj):
+        rows = RawRow.objects.filter(batch=obj).exclude(parse_error__isnull=True).exclude(parse_error="")
+        return RawRowSerializer(rows, many=True).data
