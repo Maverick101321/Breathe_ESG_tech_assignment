@@ -72,6 +72,28 @@ coverage.xml
 *.sqlite3
 
 # Dependency and tool caches
+node_modules/
 .pip-cache/
 .cache/
 
+# Frontend (Node/React/Vite/Next) build + cache artifacts
+dist/
+build/
+.vite/
+.parcel-cache/
+.turbo/
+.next/
+out/
+.nuxt/
+.svelte-kit/
+.vercel/
+.netlify/
+coverage/
+*.lcov
+.eslintcache
+
+# Frontend logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*

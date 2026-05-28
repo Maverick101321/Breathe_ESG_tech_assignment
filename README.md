@@ -48,6 +48,8 @@ This prototype supports:
 
 ## Local Setup
 
+Backend:
+
 ```bash
 cd breathe_esg
 python3 -m venv .venv
@@ -73,6 +75,17 @@ python manage.py migrate
 python manage.py seed_sample_data
 python manage.py runserver
 ```
+
+Frontend:
+
+```bash
+cd frontend
+npm install
+cp .env.example .env
+npm run dev
+```
+
+The frontend reads `VITE_API_URL` from `frontend/.env` and defaults to `http://127.0.0.1:8000`.
 
 ## Sample Users
 
@@ -112,4 +125,3 @@ For deeper rationale, see:
 - [`DECISIONS.md`](./DECISIONS.md)
 - [`SOURCES.md`](./SOURCES.md)
 - [`TRADEOFFS.md`](./TRADEOFFS.md)
-
